@@ -48,9 +48,11 @@ export default function SellToUS() {
 
   return (
     <div className="w-full max-w-[1200px]">
+
       <div className="pt-[35px] px-0 pb-[25px] text-center font-bold text-[33px]">
         Sell Your Gold and Silver Bullion
       </div>
+
       <div className="flex mb-[30px] w-full border-[1px] border-[solid] border-[#ccc] pt-[30px] pl-[30px] pb-[20px] pr-[30px]">
         <div className="flex-[1_0_38%] flex flex-col items-center">
           <Image
@@ -71,11 +73,18 @@ export default function SellToUS() {
             online 24/7 without ever speaking to our Sell-To-Us specialists.
           </div>
           <div className="pb-[30px]">
-            The process is simple. First, <a className="underline text-[#125ea7]" href="#">login</a> to your JM Bullion account
-            or <a className="underline text-[#125ea7]" href="#">click here</a> to create one. Then, click the button below and you will
-            be sent to a new page where you can select the product(s) you&apos;d
-            like to sell, input your quantity, and fill out your information to
-            complete the sale order.
+            The process is simple. First,{" "}
+            <a className="underline text-[#125ea7]" href="#">
+              login
+            </a>{" "}
+            to your JM Bullion account or{" "}
+            <a className="underline text-[#125ea7]" href="#">
+              click here
+            </a>{" "}
+            to create one. Then, click the button below and you will be sent to
+            a new page where you can select the product(s) you&apos;d like to
+            sell, input your quantity, and fill out your information to complete
+            the sale order.
           </div>
           <div className="pt-[10px]">
             <button className="h-[60px] text-[#7a4e00] font-bold cursor-pointer rounded-[4px] border-[solid] border-[thin] border-[#9B9B9B] bg-[linear-gradient(#FADB99,_#edbb56)] w-[400px] hover:bg-[linear-gradient(#F7D185,_#EFC468)]">
@@ -115,6 +124,7 @@ export default function SellToUS() {
           </div>
         </div>
       </div>
+
       <div className="flex flex-col items-center mb-[30px] w-full border-[1px] border-gray-300 p-[30px]">
         <div className="font-bold text-[25px] w-full text-center pb-[29px]">
           How it Works:
@@ -196,6 +206,7 @@ export default function SellToUS() {
           </div>
         </div>
       </div>
+
       <div className="h-[343px] ml-[0] mr-[0] my-[30px] relative bg-[url('/sellToUs/gold-silver-jewelry.png')]">
         <div className="bg-[linear-gradient(180deg,_rgba(0,_0,_0,_.7)_12.8%,_rgba(0,_0,_0,_.4)_48.81%,_rgba(0,_0,_0,_.6)_84.82%)] w-full h-full z-10 absolute"></div>
         <div className="w-full text-[#fff] absolute top-1/4 gap-[10px] flex flex-col items-center z-20">
@@ -210,6 +221,7 @@ export default function SellToUS() {
           </button>
         </div>
       </div>
+
       <div>
         <div className="text-[25px] font-bold text-center pb-[30px]">
           Why Sell to JM Bullion
@@ -263,6 +275,7 @@ export default function SellToUS() {
           </div>
         </div>
       </div>
+
       <div>
         <div className="font-bold text-[25px] px-[0] py-[30px] text-center">
           Sell-To-Us FAQ
