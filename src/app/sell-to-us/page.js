@@ -2,6 +2,50 @@ import Image from "next/image";
 import SelltousIcon from "../../../public/sellToUs/vsell-to-us.jpg";
 
 export default function SellToUS() {
+  const getFaq = (subHeading) => (
+    <div className="flex gap-1">
+      <Image
+        className="h-[15px] w-[15px] mt-[6px]"
+        src="/sellToUs/phone-ring-icon.png"
+        alt="phone-ring-icon"
+        width={20}
+        height={5}
+      />
+      <a className="underline text-[16px] text-[#444444]">{subHeading}</a>
+    </div>
+  );
+
+  const getCard = (cardSrc, cardAlt, cardTitle, cardSubTitle, cardType) => {
+    if (cardType === "blue") {
+      return (
+        <div className="bg-[#11355B] text-[#FFFFFF] border-[solid] border-[thin] border-[#C7C7C7] h-[300px] p-[45px] mb-[20px] flex flex-col justify-center items-center w-[calc((100%-40px)/3)]">
+          <Image
+            className="mb-[20px]"
+            src={cardSrc}
+            alt={cardAlt}
+            width={100}
+            height={100}
+          />
+          <div className="mb-[20px] font-semibold text-[17px]">{cardTitle}</div>
+          <div className="text-[15px] text-center">{cardSubTitle}</div>
+        </div>
+      );
+    }
+    return (
+      <div className="border-[solid] border-[thin] border-[#C7C7C7] h-[300px] p-[45px] mb-[20px] flex flex-col justify-center items-center w-[calc((100%-40px)/3)]">
+        <Image
+          className="mb-[20px]"
+          src={cardSrc}
+          alt={cardAlt}
+          width={100}
+          height={100}
+        />
+        <div className="mb-[20px] font-semibold text-[17px]">{cardTitle}</div>
+        <div className="text-[15px] text-center">{cardSubTitle}</div>
+      </div>
+    );
+  };
+
   return (
     <div className="w-full max-w-[1200px]">
       <div className="pt-[35px] px-0 pb-[25px] text-center font-bold text-[33px]">
@@ -172,108 +216,85 @@ export default function SellToUS() {
         </div>
         <div>
           <div className="flex gap-[20px]">
-            <div className="bg-[#11355B] text-[#FFFFFF] border-[solid] border-[thin] border-[#C7C7C7] h-[300px] p-[45px] mb-[20px] flex flex-col justify-center items-center w-[calc((100%-40px)/3)]">
-              <Image
-                className="mb-[20px]"
-                src="/sellToUs/vbb-leader.png"
-                alt="vbb-leader"
-                width={100}
-                height={100}
-              />
-              <div className="mb-[20px] font-semibold text-[17px]">
-                Trusted Leader
-              </div>
-              <div className="text-[15px] text-center">
-                We purchase tens of millions in product from our customers each
-                month.
-              </div>
-            </div>
-            <div className="border-[solid] border-[thin] border-[#C7C7C7] h-[300px] p-[45px] mb-[20px] flex flex-col justify-center items-center w-[calc((100%-40px)/3)]">
-              <Image
-                className="mb-[20px]"
-                src="/sellToUs/vbb-pricing.png"
-                alt="vbb-pricing"
-                width={100}
-                height={100}
-              />
-              <div className="mb-[20px] font-semibold text-[17px]">
-                Transparent Pricing
-              </div>
-              <div className="text-[15px] text-center">
-                Our Sell-To-Us prices are clearly published on the website for a
-                majority of our most popular products.
-              </div>
-            </div>
-            <div className="bg-[#11355B] text-[#FFFFFF] border-[solid] border-[thin] border-[#C7C7C7] h-[300px] p-[45px] mb-[20px] flex flex-col justify-center items-center w-[calc((100%-40px)/3)]">
-              <Image
-                className="mb-[20px]"
-                src="/sellToUs/vbb-rates.png"
-                alt="vbb-rates"
-                width={100}
-                height={100}
-              />
-              <div className="mb-[20px] font-semibold text-[17px]">
-                Industry Leading Rates
-              </div>
-              <div className="text-[15px] text-center">
-                We continually update our prices based on current market
-                conditions.
-              </div>
-            </div>
+            {getCard(
+              "/sellToUs/vbb-leader.png",
+              "vbb-leader",
+              "Trusted Leader",
+              "We purchase tens of millions in product from our customers each month.",
+              "blue"
+            )}
+            {getCard(
+              "/sellToUs/vbb-pricing.png",
+              "vbb-pricing",
+              "Transparent Pricing",
+              "Our Sell-To-Us prices are clearly published on the website for a majority of our most popular products.",
+              "white"
+            )}
+            {getCard(
+              "/sellToUs/vbb-rates.png",
+              "vbb-rates",
+              "Industry Leading Rates",
+              "We continually update our prices based on current marketconditions.",
+              "blue"
+            )}
           </div>
           <div className="flex gap-[20px]">
-            <div className="border-[solid] border-[thin] border-[#C7C7C7] h-[300px] p-[45px] mb-[20px] flex flex-col justify-center items-center w-[calc((100%-40px)/3)]">
-              <Image
-                className="mb-[20px]"
-                src="/sellToUs/vbb-shipping.png"
-                alt="vbb-shipping"
-                width={100}
-                height={100}
-              />
-              <div className="mb-[20px] font-semibold text-[17px]">
-                Easy Shipping
-              </div>
-              <div className="text-[15px] text-center">
-                We provide shipping labels, and you can drop off your package at
-                a facility or schedule a pickup. You can also choose to ship
-                products on your own.
-              </div>
-            </div>
-            <div className="bg-[#11355B] text-[#FFFFFF] border-[solid] border-[thin] border-[#C7C7C7] h-[300px] p-[45px] mb-[20px] flex flex-col justify-center items-center w-[calc((100%-40px)/3)]">
-              <Image
-                className="mb-[20px]"
-                src="/sellToUs/vbb-self.png"
-                alt="vbb-self"
-                width={100}
-                height={100}
-              />
-              <div className="mb-[20px] font-semibold text-[17px]">
-                Do-It-Yourself
-              </div>
-              <div className="text-[15px] text-center">
-                No need to speak with anyone. Sell instantly online 24/7.
-              </div>
-            </div>
-            <div className="border-[solid] border-[thin] border-[#C7C7C7] h-[300px] p-[45px] mb-[20px] flex flex-col justify-center items-center w-[calc((100%-40px)/3)]">
-              <Image
-                className="mb-[20px]"
-                src="/sellToUs/vbb-payment.png"
-                alt="vbb-payment"
-                width={100}
-                height={100}
-              />
-              <div className="mb-[20px] font-semibold text-[17px]">
-                Quick Payment
-              </div>
-              <div className="text-[15px] text-center">
-                Receive payment in 1-3 business days after products are
-                authenticated.
-              </div>
-            </div>
+            {getCard(
+              "/sellToUs/vbb-shipping.png",
+              "vbb-shipping",
+              "Easy Shipping",
+              "We provide shipping labels, and you can drop off your package at a facility or schedule a pickup. You can also choose to ship products on your own.",
+              "white"
+            )}
+            {getCard(
+              "/sellToUs/vbb-self.png",
+              "vbb-self",
+              "Do-It-Yourself",
+              "No need to speak with anyone. Sell instantly online 24/7.",
+              "blue"
+            )}
+            {getCard(
+              "/sellToUs/vbb-payment.png",
+              "vbb-payment",
+              "Quick Payment",
+              "Receive payment in 1-3 business days after products are authenticated.",
+              "white"
+            )}
           </div>
         </div>
       </div>
-      <div></div>
+      <div>
+        <div className="font-bold text-[25px] px-[0] py-[30px] text-center">
+          Sell-To-Us FAQ
+        </div>
+        <div className="flex">
+          <div className="w-4/5 flex gap-[10px]">
+            <div className="flex-[1_1_50%] flex flex-col gap-[10px]">
+              {getFaq(
+                "What if I decide not to send in my items after locking in a price? Are there penalties or fees for that?"
+              )}
+              {getFaq("If I sell to you, is it reported to the government?")}
+              {getFaq("Can I sell from my IRA?")}
+              {getFaq("Do you have a minimum Sell-To-Us amount?")}
+              {getFaq("How much is my coin/bar worth?")}
+            </div>
+            <div className="flex-[1_1_50%] flex flex-col gap-[10px]">
+              {getFaq("Do you buy all types of coins and bullion?")}
+              {getFaq("How quickly are items verified once they’re received?")}
+              {getFaq("How quickly do you pay?")}
+              {getFaq("How will you pay out my Sell-To-Us order?")}
+              {getFaq("How do I ship my Sell-To-Us order to you?")}
+            </div>
+          </div>
+          <Image
+            className="w-[240px] border-[solid] border-[1px] border-[#ccc] mb-[50px] cursor-pointer"
+            src="/sellToUs/vsell-to-us-q.png"
+            alt="vsell-to-us-q"
+            width={100}
+            height={100}
+          />
+        </div>
+      </div>
     </div>
   );
 }
