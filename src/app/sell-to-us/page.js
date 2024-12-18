@@ -18,7 +18,7 @@ export default function SellToUS() {
   const getCard = (cardSrc, cardAlt, cardTitle, cardSubTitle, cardType) => {
     if (cardType === "blue") {
       return (
-        <div className="bg-[#11355B] text-[#FFFFFF] border-[solid] border-[thin] border-[#C7C7C7] h-[300px] p-[45px] mb-[20px] flex flex-col justify-center items-center w-[calc((100%-40px)/3)]">
+        <div className="bg-[#11355B] text-[#FFFFFF] border-[solid] border-[thin] border-[#C7C7C7] h-[300px] p-[45px] mb-[20px] flex flex-col justify-center items-center lg:w-[calc((100%-40px)/3)]">
           <Image
             className="mb-[20px]"
             src={cardSrc}
@@ -32,7 +32,7 @@ export default function SellToUS() {
       );
     }
     return (
-      <div className="border-[solid] border-[thin] border-[#C7C7C7] h-[300px] p-[45px] mb-[20px] flex flex-col justify-center items-center w-[calc((100%-40px)/3)]">
+      <div className="border-[solid] border-[thin] border-[#C7C7C7] h-[300px] p-[45px] mb-[20px] flex flex-col justify-center items-center lg:w-[calc((100%-40px)/3)]">
         <Image
           className="mb-[20px]"
           src={cardSrc}
@@ -53,8 +53,8 @@ export default function SellToUS() {
         Sell Your Gold and Silver Bullion
       </div>
 
-      <div className="flex mb-[30px] w-full border-[1px] border-[solid] border-[#ccc] pt-[30px] pl-[30px] pb-[20px] pr-[30px]">
-        <div className="flex-[1_0_38%] flex flex-col items-center">
+      <div className="flex mb-[30px] w-full border-[1px] border-[solid] border-[#ccc] pt-[30px] pl-[30px] pb-[20px] pr-[30px] flex-col sm:flex-row">
+        <div className="flex-[1_1_100%] flex flex-col items-center">
           <Image
             className=""
             src="/sellToUs/vsell-to-us.jpg"
@@ -62,7 +62,7 @@ export default function SellToUS() {
             width={260}
             height={0}
           />
-          <div className="font-semibold text-[13px] mt-[10px]">
+          <div className="font-semibold text-[13px] mt-[10px] mb-[10px]">
             * Please note our minimum purchase amount is $1,000.
           </div>
         </div>
@@ -87,7 +87,7 @@ export default function SellToUS() {
             the sale order.
           </div>
           <div className="pt-[10px]">
-            <button className="h-[60px] text-[#7a4e00] font-bold cursor-pointer rounded-[4px] border-[solid] border-[thin] border-[#9B9B9B] bg-[linear-gradient(#FADB99,_#edbb56)] w-[400px] hover:bg-[linear-gradient(#F7D185,_#EFC468)]">
+            <button className="h-[60px] text-[#7a4e00] font-bold cursor-pointer rounded-[4px] border-[solid] border-[thin] border-[#9B9B9B] bg-[linear-gradient(#FADB99,_#edbb56)] w-72 sm:w-[400px] hover:bg-[linear-gradient(#F7D185,_#EFC468)]">
               Sell to Us Online
             </button>
           </div>
@@ -95,7 +95,7 @@ export default function SellToUS() {
           <div className="pt-[10px] font-semibold text-[18px]">
             Prefer to sell over the phone? No problem
           </div>
-          <div className="flex gap-[30px] mx-[0] my-[0.6rem]">
+          <div className="sm:flex gap-[30px] mx-[0] my-[0.6rem]">
             <div className="flex items-center gap-[15px]">
               <Image
                 className=""
@@ -108,7 +108,7 @@ export default function SellToUS() {
                 844-258-2538
               </a>
             </div>
-            <div className="border-r border-gray-300" />
+            <div className="sm:border-r border-gray-300" />
             <div className="flex items-center gap-[15px]">
               <Image
                 className=""
@@ -210,10 +210,10 @@ export default function SellToUS() {
       <div className="h-[343px] ml-[0] mr-[0] my-[30px] relative bg-[url('/sellToUs/gold-silver-jewelry.png')]">
         <div className="bg-[linear-gradient(180deg,_rgba(0,_0,_0,_.7)_12.8%,_rgba(0,_0,_0,_.4)_48.81%,_rgba(0,_0,_0,_.6)_84.82%)] w-full h-full z-10 absolute"></div>
         <div className="w-full text-[#fff] absolute top-1/4 gap-[10px] flex flex-col items-center z-20">
-          <div className="text-[36px] m-0 font-[TrajanProBold] font-semibold">
+          <div className="m-0 font-[TrajanProBold] font-semibold md:text-[36px] sm: text-[20px]">
             We Buy Jewelry, Scrap, and Silverware!
           </div>
-          <div className="text-[30px] italic font-normal">
+          <div className="italic font-normal md:text-[30px] sm:text-[15px]">
             Free Insured Shipping & Returns
           </div>
           <button className="ml-[auto] mr-[auto] my-[20px] px-[20px] py-[10px] text-[20px] text-[#7a4e00] font-bold cursor-pointer rounded-[4px] border-[solid] border-[thin] border-[#9B9B9B] bg-[linear-gradient(#FADB99,_#edbb56)] hover:bg-[linear-gradient(#F7D185,_#EFC468)]">
@@ -227,7 +227,7 @@ export default function SellToUS() {
           Why Sell to JM Bullion
         </div>
         <div>
-          <div className="flex gap-[20px]">
+          <div className="lg:flex gap-[20px]">
             {getCard(
               "/sellToUs/vbb-leader.png",
               "vbb-leader",
@@ -250,7 +250,7 @@ export default function SellToUS() {
               "blue"
             )}
           </div>
-          <div className="flex gap-[20px]">
+          <div className="lg:flex gap-[20px]">
             {getCard(
               "/sellToUs/vbb-shipping.png",
               "vbb-shipping",
@@ -280,8 +280,8 @@ export default function SellToUS() {
         <div className="font-bold text-[25px] px-[0] py-[30px] text-center">
           Sell-To-Us FAQ
         </div>
-        <div className="flex">
-          <div className="w-4/5 flex gap-[10px]">
+        <div className="flex flex-col items-center sm:flex-row">
+          <div className="flex gap-[10px] flex-col  sm:flex-row sm:w-4/5">
             <div className="flex-[1_1_50%] flex flex-col gap-[10px]">
               {getFaq(
                 "What if I decide not to send in my items after locking in a price? Are there penalties or fees for that?"
@@ -300,7 +300,7 @@ export default function SellToUS() {
             </div>
           </div>
           <Image
-            className="w-[240px] border-[solid] border-[1px] border-[#ccc] mb-[50px] cursor-pointer"
+            className="w-[240px] border-[solid] border-[1px] border-[#ccc] mt-[10px] mb-[40px] cursor-pointer"
             src="/sellToUs/vsell-to-us-q.png"
             alt="vsell-to-us-q"
             width={100}
