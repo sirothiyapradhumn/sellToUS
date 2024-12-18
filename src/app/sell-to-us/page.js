@@ -71,8 +71,8 @@ export default function SellToUS() {
             online 24/7 without ever speaking to our Sell-To-Us specialists.
           </div>
           <div className="pb-[30px]">
-            The process is simple. First, login to your JM Bullion account or
-            click here to create one. Then, click the button below and you will
+            The process is simple. First, <a className="underline text-[#125ea7]" href="#">login</a> to your JM Bullion account
+            or <a className="underline text-[#125ea7]" href="#">click here</a> to create one. Then, click the button below and you will
             be sent to a new page where you can select the product(s) you&apos;d
             like to sell, input your quantity, and fill out your information to
             complete the sale order.
@@ -95,9 +95,9 @@ export default function SellToUS() {
                 width={22}
                 height={22}
               />
-              <div className="underline text-[#114e88] font-semibold text-[18px]">
+              <a className="underline text-[#114e88] font-semibold text-[18px]">
                 844-258-2538
-              </div>
+              </a>
             </div>
             <div className="border-r border-gray-300" />
             <div className="flex items-center gap-[15px]">
@@ -108,9 +108,9 @@ export default function SellToUS() {
                 width={22}
                 height={22}
               />
-              <div className="underline text-[#114e88] font-semibold text-[18px]">
+              <a className="underline text-[#114e88] font-semibold text-[18px]">
                 SellToUs@jmbullion.com
-              </div>
+              </a>
             </div>
           </div>
         </div>
